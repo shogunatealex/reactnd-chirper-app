@@ -1,6 +1,7 @@
 import { RECEIVE_USERS } from '../actions/users'
 
 export default function users (state = {}, action) {
+    console.log(action);
     switch(action.type) {
         case RECEIVE_USERS :
             return {
@@ -8,7 +9,6 @@ export default function users (state = {}, action) {
                 ...action.users
             }
         default:
-            console.log(action.type + " was not valid");
             return state
     }
 }

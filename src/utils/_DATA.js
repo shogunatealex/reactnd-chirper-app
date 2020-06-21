@@ -255,6 +255,7 @@ export function _saveTweet ({ text, author, replyingTo }) {
       author,
       replyingTo
     })
+    console.log('here');
 
     setTimeout(() => {
       tweets = {
@@ -262,6 +263,7 @@ export function _saveTweet ({ text, author, replyingTo }) {
         [formattedTweet.id]: formattedTweet,
       }
 
+      console.log(users);
       users = {
         ...users,
         [author]: {
@@ -270,6 +272,7 @@ export function _saveTweet ({ text, author, replyingTo }) {
         }
       }
 
+      console.log(formattedTweet);
       res(formattedTweet)
     }, 1000)
   })
